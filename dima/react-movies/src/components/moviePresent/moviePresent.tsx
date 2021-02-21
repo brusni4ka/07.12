@@ -3,6 +3,7 @@ import { Redirect } from "react-router";
 import MovieInterface from "../../interfaces/movieInterface";
 import Loader from "../loader";
 import "./moviePresent.css";
+
 interface MoviePresentProps {
   movie: MovieInterface | null;
   loading: boolean;
@@ -28,7 +29,7 @@ const MoviePresent = ({ movie, loading }: MoviePresentProps) => {
 
           <span className="movie-tagline">{movie.tagline}</span>
           <span className="movie-date">
-            {movie.release_date && movie.release_date.split("-")[0]}
+            {movie.release_date && new Date(movie.release_date).getFullYear()}
           </span>
           <span className="movie-runtime">
             {movie.runtime && movie.runtime + "min"}

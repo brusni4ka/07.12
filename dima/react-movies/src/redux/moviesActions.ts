@@ -21,17 +21,12 @@ export interface ResetMoviesAction {
 
 export interface SetMoviesAction {
   type: ActionTypes.SET_MOVIES;
-  payload: { movies: MoviesDataInterface; loadingMovies: boolean };
+  payload: { movies: MoviesDataInterface };
 }
 
 export interface FetchMovieAction {
   type: ActionTypes.FETCH_MOVIE;
   payload: { id: string; offset: number };
-}
-
-export interface SetPageAction {
-  type: ActionTypes.SET_PAGE;
-  payload: { currentPage: number };
 }
 
 export interface SetMovieAction {
@@ -56,7 +51,6 @@ export type MoviesAction =
   | FetchMovieAction
   | SetMovieAction
   | ResetMoviesAction
-  | SetPageAction
   | ResetMovieAction
   | FetchMoviesError
   | FetchMovieError;
@@ -79,17 +73,9 @@ export const fetchMovie = (id: string, offset: number): MoviesAction => ({
   payload: { id, offset },
 });
 
-export const setPage = (currentPage: number): MoviesAction => ({
-  type: ActionTypes.SET_PAGE,
-  payload: { currentPage },
-});
-
-export const setMovies = (
-  movies: MoviesDataInterface,
-  loadingMovies: boolean
-): MoviesAction => ({
+export const setMovies = (movies: MoviesDataInterface): MoviesAction => ({
   type: ActionTypes.SET_MOVIES,
-  payload: { movies, loadingMovies },
+  payload: { movies },
 });
 
 export const resetMovies = (): MoviesAction => ({

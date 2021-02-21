@@ -1,9 +1,6 @@
 import ActionTypes from "../enums/ActionTypes";
-import {
-  FetchMoviesAction,
-  setMovies,
-  fetchMoviesError,
-} from "./moviesActions";
+import { FetchMoviesAction } from "./moviesActions";
+import { setMovies, fetchMoviesError } from "./moviesReducer";
 import { takeLatest, call, put, all } from "redux-saga/effects";
 import QueryString from "query-string";
 import MovieInterface from "../interfaces/movieInterface";
@@ -23,7 +20,7 @@ function* fetchMoviesSaga(action: FetchMoviesAction) {
   try {
     const { loadingMovies, ...params } = action.payload;
     const movies = yield call(fetchMovies, params);
-    yield put(setMovies(movies, false));
+    yield put(setMovies(movies));
   } catch (e) {
     yield put(fetchMoviesError());
   }

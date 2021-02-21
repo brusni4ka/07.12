@@ -1,13 +1,12 @@
 enum ActionTypes {
-  SET_MOVIES = "setMovies",
-  FETCH_MOVIES = "fetchMovies",
-  SET_MOVIE = "setMovie",
-  FETCH_MOVIE = "fetchMovie",
-  RESET_MOVIES = "resetMovies",
-  SET_PAGE = "setPage",
-  RESET_MOVIE = "resetMovie",
-  FETCH_MOVIES_ERROR = "fetchMoviesError",
-  FETCH_MOVIE_ERROR = "fetchMovieError",
+  SET_MOVIES = "movies/setMovies",
+  FETCH_MOVIES = "movies/fetchMovies",
+  SET_MOVIE = "movies/setMovie",
+  FETCH_MOVIE = "movies/fetchMovie",
+  RESET_MOVIES = "movies/resetMovies",
+  RESET_MOVIE = "movies/resetMovie",
+  FETCH_MOVIES_ERROR = "movies/fetchMoviesError",
+  FETCH_MOVIE_ERROR = "movies/fetchMovieError",
 }
 
 export default ActionTypes;
