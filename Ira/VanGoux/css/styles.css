@@ -13,11 +13,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  padding-top: 15px;
-  background: url("../img/bg_img.png") 82% 340px no-repeat, url("../img/background.png") 0 0;    
+  background: url("../img/background.png") 0 0;
 }
 
 a {
@@ -27,49 +27,50 @@ a:hover {
   text-decoration: none;
 }
 
-nav {
-  height: 110px;
-  margin-bottom: 160px;
-  padding: 0 115px;
+.wrapper {
+  max-width: 1440px;
+  min-width: 300px;
+  padding: 0 10%;
+}
+.wrapperCalling {
+  background: url("../img/imgBlue.png") 100% center no-repeat #1968fc;
+}
+.wrapperContactUs {
+  padding-right: 0;
+}
+.wrapperHero {
+  background: url("../img/bg_img.png") 100% -10% no-repeat;
+}
+
+.header {
+  min-height: 110px;
+  margin: 0 auto;
+  padding: 30px 0 120px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#logo {
+.logo {
   width: 180px;
   height: 50px;
 }
-
-#logo a {
+.logo a {
   display: block;
   width: 180px;
   height: 50px;
 }
 
-.button, #contactUsButton, #callingButton, #headerButton, #menuButton {
+.button, .contactUsButton, .callingButton {
   height: 50px;
+  padding: 0 40px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 50px;
+  line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   border: none;
-}
-
-#menu {
-  width: 540px;
-  height: 50px;
-  margin-left: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-}
-#menuButton {
-  width: 180px;
-  min-width: 180px;
-  margin-left: 20px;
+  outline: none;
   box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
   text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
   font-family: "mulisemibold", Helvetica, sans-serif;
@@ -77,121 +78,93 @@ nav {
   color: #ffffff;
 }
 
+.menu {
+  min-height: 50px;
+  margin-left: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .menuLink {
-  width: 120px;
-  height: 50px;
-  text-align: center;
-}
-.menuLink:last-child {
-  width: 180px;
-}
-.menuLink a {
   display: block;
-  width: 120px;
-  height: 50px;
+  padding: 0 20px;
   font-family: "mulisemibold", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  line-height: 50px;
+  line-height: 20px;
   color: #000000;
 }
-.menuLink a:last-child {
-  width: 180px;
-}
 
-#header {
-  min-height: 310px;
-  margin-bottom: 80px;
-  padding: 0 115px;
+.hero {
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
-
-h1 {
-  margin-bottom: 20px;
+.heroTitle, .heroTitleMobile {
+  margin-bottom: 30px;
   font-family: "mulisemibold", Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 2.5em;
   line-height: 1.5;
   letter-spacing: 1px;
   color: #11223f;
 }
-
-#headerText {
-  margin-bottom: 40px;
-  font-size: 20px;
+.heroText, .heroTextMobile {
+  margin-bottom: 30px;
+  font-size: 1.25em;
   line-height: 2;
   color: #11223f;
   font-family: "muliregular", Helvetica, sans-serif;
-}
-#headerButton {
-  width: 300px;
-  min-width: 300px;
-  margin-bottom: 40px;
-  text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
-  box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
-  font-family: "mulisemibold", Arial, sans-serif;
-  color: #ffffff;
-  background-color: #1968fc;
 }
 
 .onlyMobile {
   display: none;
 }
 
-#testimonialSection {
-  min-height: 370px;
-  margin-bottom: 40px;
-  padding: 45px 115px;
+.testimonial {
+  margin: 0 auto;
+  padding-bottom: 80px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-
 .testimonialCard {
-  width: 424px;
-  min-width: 424px;
-  height: 200px;
   padding: 40px;
   box-shadow: 0 20px 60px 0 rgba(25, 104, 252, 0.1);
   background: #ffffff url("../img/quote.png") 90% 16% no-repeat;
+  flex: 1;
 }
-.testimonialCardfirst-child {
+.testimonialCard:first-child {
   margin-right: 50px;
 }
-
-.testimonialImgBloc {
+.testimonialCardImgBlock {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 40px;
 }
-
-.testimonialPerson {
+.testimonialCardPerson {
   margin-left: 20px;
   line-height: 2;
 }
-
-.testimonialName {
+.testimonialCardName {
   font-family: "mulisemibold", Arial, sans-serif;
   font-weight: 600;
   font-size: 18px;
   color: #11223f;
 }
-
-.testimonialPosition {
+.testimonialCardPosition {
   opacity: 0.8;
   font-family: "mulisemibold", Arial, sans-serif;
   font-size: 14px;
   color: #1967fa;
 }
-
-.testimonialText {
+.testimonialCardText {
   line-height: 1.88;
   font-family: "muliregular", Helvetica, sans-serif;
   font-size: 16px;
   color: #11223f;
 }
 
-.line, #contactUsHeader::after, #callingTitle::after, h2::after {
+.line, .contactUsTitle::after, .callingTitle::after, h2::after {
   display: table;
   content: "";
   height: 2px;
@@ -201,7 +174,7 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 40px 115px;
+  margin-bottom: 40px;
   font-family: "muliregular", Helvetica, sans-serif;
   font-size: 30px;
   line-height: 2;
@@ -216,47 +189,43 @@ h2::after {
   box-shadow: 0 2px 0 0 #d1e1fe;
 }
 
-#featuresSection {
-  min-height: 400px;
-  margin-bottom: 40px;
-  padding: 0 115px;
+.features {
+  margin: 0 auto;
+  padding-bottom: 80px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-
 .featuresCard {
-  width: 320px;
-  height: 290px;
-  margin-right: 60px;
+  margin-right: 40px;
   background-color: #ffffff;
   box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);
+  position: relative;
+  flex: 1;
 }
-.featuresCard:first-child {
-  align-self: flex-start;
+.featuresCard:nth-child(2) {
+  top: 40px;
+}
+.featuresCard:nth-child(3) {
+  top: 80px;
 }
 .featuresCard:last-child {
   margin: 0;
-  align-self: flex-end;
 }
-
-.featuresImgBloc {
+.featuresCardImgBlock {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background-color: #f3f7ff;
 }
-
-.featuresName {
+.featuresCardName, .featuresCardNameMobile {
   padding: 20px;
-  font-family: "mulisemibold", Arial, sans-serif;
+  font-family: "mulisemibold", Helvetica, sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.5;
   color: #11223f;
 }
-
-.featuresText {  
+.featuresCardText {
   padding: 30px 40px;
   font-family: "muliregular", Helvetica, sans-serif;
   font-size: 16px;
@@ -264,59 +233,48 @@ h2::after {
   color: #11223f;
 }
 
-#whoForSection {
-  min-height: 450px;
-  max-width: 1300px;
-  margin-bottom: 40px;
-  padding: 0 100px;
+.whoFor {
+  margin: 0 auto;
+  padding-bottom: 60px;
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .whoForCard {
-  width: 310px;
-  height: 110px;
-  margin: 0 20px 20px 0;
+  width: calc(33% - 20px);
+  margin-bottom: 20px;
   padding: 20px;
-  background-color: #ffffff;
   box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);
+  background-color: #ffffff;
 }
-.whoForCard:nth-child(3), .whoForCard:nth-child(6) {
-  margin: 0 0 20px 0;
-}
-
-.whoForTitle {
+.whoForCardTitle {
   margin-bottom: 20px;
   font-family: "mulisemibold", Helvetica, sans-serif;
   font-size: 20px;
+  font-weight: bold;
   line-height: 2;
   color: #1967fa;
 }
-
-.whoForText {
+.whoForCardText {
   font-size: 16px;
   font-family: "muliregular", Helvetica, sans-serif;
   line-height: 1.88;
   color: #11223f;
 }
 
-#activitySection {
-  min-height: 240px;
-  margin-bottom: 40px;
-  padding: 0 115px;
+.activity {
+  margin: 0 auto;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .activityCard {
-  width: 480px;
-  height: 80px;
+  width: calc(50% - 20px);
+  min-height: 80px;
   margin: 0 40px 40px 0;
   display: flex;
   align-items: center;
@@ -327,8 +285,7 @@ h2::after {
 .activityCard:nth-child(2), .activityCard:nth-child(4) {
   margin: 0 0 40px 0;
 }
-
-.activityText {
+.activityCardText {
   padding: 15px;
   font-family: "mulisemibold", Helvetica, sans-serif;
   font-size: 18px;
@@ -337,117 +294,97 @@ h2::after {
   color: #000000;
 }
 
-#callingSection {
-  min-height: 300px;
-  padding: 80px 160px 80px 115px;
-  background: url("../img/imgBlue.png") 110% center no-repeat #1968fc;
+.calling {
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
-
-#callingTitle {
+.callingTitle {
   margin: 0 0 40px 0;
   font-family: "muliregular", Helvetica, sans-serif;
   font-size: 30px;
   line-height: 2;
   color: #ffffff;
 }
-#callingTitle::after {
+.callingTitle::after {
   width: 80px;
   margin-top: 8px;
   margin-left: -40px;
   background: #ffffff;
   box-shadow: 0 2px 0 0 #6a9eff;
 }
-
-#callingText {
+.callingText {
   margin-bottom: 40px;
   font-family: "muliregular", Helvetica, sans-serif;
   font-size: 20px;
   line-height: 2;
   color: #ffffff;
 }
-
-#callingButton {
-  width: 320px;
-  min-width: 320px;
-  font-family: "mulisemibold", Helvetica, sans-serif;
+.callingButton {
   color: #1968fc;
   background-color: #ffffff;
   box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
 }
 
-#contactUsSection {
-  min-height: 650px;
-  padding: 0 0 0 115px;
+.contactUs {
+  margin: 0 auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: space-around;
   background-color: #f5f8ff;
 }
-
-#formBlock {
-  width: 45%;
-  min-height: 500px;
-  padding: 120px 0 20px 0;
-}
-
-#contactUsTitle {
+.contactUsTitle {
   margin: 0 0 40px 0;
   font-family: Helvetica, sans-serif;
 }
-
-#contactUsTitle::after {
+.contactUsTitle::after {
   width: 50px;
   margin-top: 8px;
   margin-left: -25px;
   background: #1968fc;
   box-shadow: 0 2px 0 0 #d1e1fe;
 }
-
-#contactForm {
-  padding-left: 40px;
+.contactUsFormBlock {
+  width: 55%;
+  padding: 120px 60px 20px 0;
 }
-
-.formLabel {
+.contactUsForm {
+  padding-left: 60px;
+}
+.contactUsFormInput, .contactUsFormTextarea {
+  width: 100%;
+  height: 52px;
+  margin-bottom: 40px;
+  border: none;
+  outline: none;
+  line-height: 2;
+  background-color: #f6f9fc;
+  border-bottom: 2px solid #1968fc;
+}
+.contactUsFormInput::placeholder, .contactUsFormTextarea::placeholder {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.53px;
   color: #141720;
 }
-
-.formInput, .message {
-  width: 400px;
-  height: 52px;
-  border: none;
-  background-color: #f6f9fc;
-  border-bottom: 2px solid #1968fc;
-}
-
-.message {
-  margin-bottom: 40px;
+.contactUsFormTextarea {
   height: 120px;
 }
-
-#contactUsButton {
-  width: 300px;
-  min-width: 300px;
-  margin-left: 98px;
+.contactUsButton {
+  width: 60%;
+  margin-left: 40%;
   font-family: Helvetica, sans-serif;
-  color: #ffffff;
-  background-color: #1968fc;
   box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
 }
-
-#mapBlock {
-  width: calc(45%-155px);
-  height: 640px;
-  margin-left: 40px;
+.contactUsMapBlock {
+  width: 45%;
+  height: auto;
 }
 
-#footer {
+.footer {
   height: 130px;
-  min-height: 130px;
-  padding: 0 115px;
+  margin: 0 auto;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -464,329 +401,256 @@ h2::after {
   height: 50px;
 }
 .footerMenu {
-  width: 480px;
-  height: 50px;
-  margin-right: 40px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  list-style: none;
-}  
-
-.footerLink {
-  width: 120px;
-  height: 50px;
-  text-align: center;
 }
-.footerLink a {
+.footerMenuLink {
   display: block;
-  width: 120px;
-  height: 50px;
+  min-height: 50px;
+  padding: 20px;
   font-family: "mulisemibold", Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 600;
-  line-height: 50px;
+  line-height: 20px;
+  text-align: center;
   color: #000000;
 }
-
-.socialLink {
-  display: block;
-  margin-top: 20px;
+.footerSocialBlock {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footerSocialBlockLink {
   width: 50px;
   height: 50px;
   text-align: center;
-}
-
-.footerImage {
-  margin-top: 20px;
+  line-height: 60px;
 }
 
 /*RESPONSIVE DESIGN  */
-@media screen and (min-width: 600px) and (max-width: 800px) {
-
-    body {
-        padding-top: 15px;
-        background: url("../img/backgroundMobile.png") 0 0;        
-    }
-     
-    nav {
-        height: 80px;
-        padding: 35px 80px 0;
-        margin-bottom: 60px;
-        display: block;
-    }
-    
-    #menu, #menuButton, #headerTitle, #headerButton,
-    #headerText, .featuresName, #whoForTitle, #callingText, #footer {
-        display: none;
-    }
-     
-    #header {        
-        margin-bottom: 60px;
-        padding: 0 70px;
-        border: 2px solid green;
-    }
-
-    #headerTitleMobile {
-      display: block;      
-      font-size: 2.5em;
-      letter-spacing: 0.5;
-    }
-
-    #headerTextMobile {
-      display: block;
-      margin-bottom: 40px;
-      font-size: 1.25em;
-      line-height: 2;
-      color: #11223f;
-      font-family: "muliregular", Helvetica, sans-serif;      
-    }
-     
-    #headerButtonMobile {
-         display: block;
-         width: 300px;
-         min-width: 300px;
-         height: 50px;
-         margin-bottom: 40px;
-         text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
-         box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
-         font-family: 'mulisemibold', Arial, sans-serif;
-         font-size: 14px;    
-         text-transform: uppercase;
-         line-height: 50px;
-         text-align: center;
-         color: #ffffff;
-         background-color: #1968fc;
-    }
-
-    #imageSectionMobile {
-        display: block;
-        margin-bottom: 60px;
-        height: 373px;
-        background: url("../img/bg_img.png") center 0 no-repeat;
-        border: 2px solid red;
-    }
-     
-    #blueSectionMobile {
-         display: block;         
-         min-height: 180px;
-         margin-bottom: 60px;
-         padding: 0 60px;
-         font-family: 'mulisemibold', Arial, sans-serif;
-         font-size: 20px;   
-         line-height: 1.5;  
-         text-align: center;
-         text-transform: uppercase;
-         color: #ffffff;
-         background-color: #1968fc;
-         border: 2px solid red;
-    }
-     
-    #blueSectionTitle {
-          padding: 60px 0;
-    }
-
-    #testimonialSection {          
-          min-height: 648px;
-          display: block;
-          margin-bottom: 0 auto 60px;
-          padding: 0;
-          border: 2px solid blue;
-    }
-     
-    .testimonialCard {
-          width: 540px;
-          min-width: 424px;
-          margin: 0 auto 50px;
-          padding: 40px 30px;
-          border: 2px solid green;
-    }
-     
-    .testimonialCard:last-child {
-          margin-bottom: 0;
-    }
-     
-    h2 {
-        margin: 0 0 40px 60px;
-    }
-     
-    #featuresSection {
-        min-height: 725px;
-        display: block;        
-        padding: 0 60px;
-        border: 2px solid yellow;
-    }
-     
-    .featuresCard {  
-        width: 100%;    
-        min-width: 520px;
-        height: 200px;
-        margin-right: 0;
-        margin-bottom: 55px;
-        position: relative;
-    }
-     
-    .featuresCardImg {
-        width: 80px;
-        height: 80px;
-    }
-
-    .featuresCard:first-child::after,
-    .featuresCard:nth-child(2)::after {  
-         display: table;
-         content: "";
-         width: 1px;
-         height: 60px;
-         position: absolute;
-         left: 0;
-         top: 100%;
-         margin-left: 60px;
-         border-left: dotted 2px #1968fc;
-    }
-     
-    #imageSectionMobile {
-        height: 503px;
-        padding: 0 21px;
-        margin-bottom: 60px;
-        background: url("../img/bg_img.png") 0 0 no-repeat;
-        border: 2px solid green;
-    }
-    .featuresNameMobile {
-        display: block;
-        padding: 20px;
-        font-family: "mulisemibold", Arial, sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 1.5;
-        color: #11223f;
-    }
-
-    #whoForSection {      
-      margin-bottom: 60px;
-      padding: 0 60px;
-      border: 2px solid green;
-
-    }     
-    
-    #whoForTitleMobile {
-      display: block;
-    }
-
-    .whoForCard {
-      width: 173px;
-      height: 150px;
-      min-height: 140px;          
-      border: 2px solid blue;
-    }
-
-    .whoForCard:nth-child(3),  .whoForCard:nth-child(6) {
-      margin: 0 20px 20px 0;
-    }
-    .whoForTitle {
-      line-height: 1.5;
-    }
-    
-    .whoForText {
-      line-height: 1.2;
-    }
-
-    #activitySection {      
-      display: block;
-      min-height: 440px;
-      margin-bottom: 0 auto 60px;
-      padding: 0 60px;
-      text-align: center;
-    }
-
-    .activityCard {
-      width: 100%;
-      min-width: 520px;
-    }
-
-    #callingSection {
-      min-height: 350px;
-      margin-bottom: 60px; 
-      padding: 0 60px;
-      background: #1968fc;
-    }
-    
-    #callingTextMobile {
-      display: block;
-      margin-bottom: 40px;
-      font-family: "muliregular", Helvetica, sans-serif;
-      font-size: 20px;
-      line-height: 2;
-      color: #ffffff;
-    }
-
-    #contactUsSection {  
-      min-width: 600px;      
-      display: block;
-      padding: 0;
-    }    
-    
-    #contactUsTitle::after {
-      width: 80px;      
-      margin-left: -40px;      
-    }
-
-    #formBlock {
-      width: calc(100% - 120px);  
-      min-width: calc(100% - 120px);    
-      min-height: 500px;
-      margin: 0 60px 60px 60px;
-      padding: 0 0 20px 0;
-      border: 2px solid red;
-    }
-    
-    #mapBlock {      
-      margin-left: 0;      
-      border: 2px solid red;
-    }
-
-    .formInput, .message {
-      width: 450px;     
-    }
-
-    #footerMobile {
-      display: block;
-      height: 200px;
-      min-height: 180px;
-      display: inline-block;
-      padding: 0 60px;
-      border: 2px solid red;            
-    }
-
-    .footerLogo {   
-      display: inline-block;   
-      margin-right: 30%;
-    }
-     
-    .socialBlock { 
-      display: inline-block;
-      width: 100px;
-      height: 50px;
-      margin-top: 10px;
-   }
-   
-     .socialLink {
-       display: inline-block;
-       margin: 0;
-     }
-
-     .footerMenu {
-       display: block;
-     }
-     
-     .footerImage {
-       display: inline-block;
-     }
-     
-     
-     
-     
-     
-     
-     
-     
+@media screen and (max-width: 800px) {
+  body {
+    background: url("../img/backgroundMobile.png") 0 0;
   }
+
+  .menu, .headerButton, .heroTitle, .heroButton,
+.heroText, .featuresCardName, .whoForTitle, .callingText,
+.wrapperFooter, .footer {
+    display: none;
+  }
+
+  .wrapperImage, .wrapperBlue, .wrapperContactUsFormBlock,
+.wrapperContactUsMapBlock, .wrapperFooterMobile {
+    display: block;
+  }
+
+  .header {
+    padding: 30px 0 60px 0;
+  }
+
+  .wrapperHero {
+    background: none;
+  }
+
+  .hero {
+    padding-bottom: 60px;
+    background-image: none;
+  }
+  .heroTitleMobile {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 2.5em;
+  }
+  .heroTextMobile {
+    display: block;
+    font-size: 1.25em;
+  }
+  .heroButtonMobile {
+    display: block;
+  }
+
+  .wrapperImage {
+    padding: 0 20px;
+  }
+
+  .imageSectionMobile {
+    display: block;
+    min-height: 418px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    background: url("../img/bg_img.png") center 0 no-repeat;
+  }
+
+  .wrapperBlue, .wrapperCalling {
+    background: #1968fc;
+  }
+
+  .blueSectionMobile {
+    display: block;
+    min-height: 180px;
+    margin-bottom: 60px;
+    font-family: "mulisemibold", Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .blueSectionTitle {
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+  }
+  .testimonialCard {
+    margin-bottom: 50px;
+    padding: 40px 30px;
+  }
+  .testimonialCard:first-child {
+    margin-right: 0;
+  }
+
+  h2::after {
+    margin-left: 0;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+  .featuresCard {
+    margin-right: 0;
+    margin-bottom: 55px;
+  }
+  .featuresCard:nth-child(2), .featuresCard:nth-child(3) {
+    top: 0;
+  }
+  .featuresCardImg {
+    width: 80px;
+    height: 80px;
+  }
+  .featuresCard:first-child::after, .featuresCard:nth-child(2)::after {
+    display: table;
+    content: "";
+    width: 1px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-left: 60px;
+    border-left: dotted 2px #1968fc;
+  }
+  .featuresNameMobile {
+    display: block;
+    padding: 20px;
+    font-family: "mulisemibold", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #11223f;
+  }
+
+  .whoFor {
+    padding-bottom: 60px;
+  }
+  .whoForTitleMobile {
+    display: block;
+  }
+  .whoForCard {
+    width: calc(50% - 10px);
+  }
+  .whoForCardTitle {
+    line-height: 1.5;
+  }
+  .whoForCardText {
+    line-height: 1.2;
+  }
+
+  .activitySection {
+    padding-bottom: 60px;
+    flex-direction: column;
+  }
+
+  .activityCard {
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+
+  .calling {
+    padding-bottom: 60px;
+    background: #1968fc;
+  }
+  .callingTextMobile {
+    display: block;
+    margin-bottom: 40px;
+    font-family: "muliregular", Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    color: #ffffff;
+  }
+  .callingTitle::after {
+    margin-left: 0;
+  }
+
+  .wrapperContactUs {
+    padding: 0;
+  }
+  .wrapperContactUsFormBlock {
+    padding-left: 10%;
+  }
+
+  .contactUs {
+    flex-direction: column;
+    padding: 0;
+  }
+  .contactUsTitle::after {
+    width: 80px;
+    margin-left: 0px;
+  }
+  .contactUsFormBlock {
+    width: 100%;
+    padding-bottom: 60px;
+    padding-left: calc();
+  }
+  .contactUsForm {
+    padding-left: 60px;
+  }
+  .contactUsMapBlock {
+    width: 100%;
+  }
+
+  .footerMobile {
+    display: block;
+    padding: 30px 0;
+  }
+
+  .footerMobileTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footerMobileBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerMenuLink {
+    padding: 0 20px;
+  }
+
+  .footerImage {
+    position: relative;
+    top: 40px;
+    left: 30px;
+  }
+}

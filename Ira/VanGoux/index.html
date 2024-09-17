@@ -10,205 +10,225 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">  
     </head>
     <body>
-        <nav>
-            <div id="logo">
+        <div class="wrapper wrapperHeader">
+        <header class="header">
+            <div class="logo">
                 <a href="#"><img src="img/logo.png"
                                  srcset="img/logo@2x.png 2x,
                                          img/logo@3x.png 3x"
                                   alt=""/>       
                 </a>
             </div>
-            <ul id="menu">
-                <li class="menuLink"><a href="#">How it works</a></li>
-                <li class="menuLink"><a href="#featuresSection">Features</a></li>
-                <li class="menuLink"><a href="#">Use cases</a></li>
-                <li class="menuLink"><a href="#">Schedule a demo</a></li>
-            </ul>     
-            <button type="button" id="menuButton">Upload sketch
+            <nav class="menu">
+                <a class="menuLink" href="#">How it works</a>
+                <a class="menuLink" href="#featuresSection">Features</a>
+                <a class="menuLink" href="#">Use cases</a>
+                <a class="menuLink" href="#">Schedule a demo</a>
+            </nav>     
+            <button type="button" class="button headerButton">Upload sketch
             </button>
-        </nav>
-        <header id="header">
-            <h1 id="headerTitle">Launch beautiful websites<br>directly from Sketch
-            </h1>
-            <h1 id="headerTitleMobile" class="onlyMobile">Launch websites<br>directly from Sketch
-            </h1>
-            <p id="headerText">Create pixel perfect websites, landing pages & portfolios directly<br>
-                from your sketch designs
-            </p>
-            <p id="headerTextMobile" class="onlyMobile">Create pixel perfect websites, landing pages & <br>portfolios directly
-                from your sketch designs
-            </p>
-            <button type="button" id="headerButton"> Upload your sketch file               
-            </button>
-            <button type="button" id="headerButtonMobile" class="onlyMobile"> See VanGoux in action               
-            </button>
-
         </header>
-        <section id="imageSectionMobile" class="onlyMobile">            
-        </section>
+        </div>
         <main>
-            <section id="blueSectionMobile" class="onlyMobile"> 
-                <h3 id="blueSectionTitle">Please visit our desktop site to upload your sketch designs</h3>
+            <div class="wrapper wrapperHero">
+            <section class="hero">
+                <p class="heroTitle">Launch beautiful websites<br>directly from Sketch
+                </p>
+                <p class="heroTitleMobile onlyMobile">Launch websites<br>directly from Sketch
+                </p>
+                <p class="heroText">Create pixel perfect websites, landing pages & portfolios directly<br>
+                                   from your sketch designs
+                </p>
+                <p class="heroTextMobile onlyMobile">Create pixel perfect websites, landing pages & <br>portfolios directly
+                                                            from your sketch designs
+                </p>
+                <button type="button" class="button heroButton"> Upload your sketch file               
+                </button>
+                <button type="button" class="button heroButtonMobile onlyMobile"> See VanGoux in action               
+                </button>
             </section>
-            <section id="testimonialSection">                
+            </div>
+            <div class="wrapper wrapperImage onlyMobile">
+                <section class="imageSectionMobile onlyMobile">            
+                </section> 
+            </div>   
+            <div class="wrapper wrapperBlue onlyMobile">    
+                <section class="blueSectionMobile onlyMobile"> 
+                    <h3 class="blueSectionTitle">Please visit our desktop site to upload your sketch designs</h3>
+                </section>
+            </div>
+            <div class="wrapper wrapperTestimonial">
+            <section class="testimonial">                
                 <div class="testimonialCard">                   
-                   <div class="testimonialImgBloc"> 
+                   <div class="testimonialCardImgBlock"> 
                         <img src = "img/testimonial1.jpg" width="100" height="100"
                              srcset="img/testimonial1@2x.jpg 2x,
                                      img/testimonial1@3x.jpg 3x"
                              alt="client's photo1"/>
-                        <div class="testimonialPerson">
-                            <h3 class="testimonialName">John Doe</h3>
-                            <p class="testimonialPosition">CEO, PrettyDopeDesigns</p>
+                        <div class="testimonialCardPerson">
+                            <h3 class="testimonialCardName">John Doe</h3>
+                            <p class="testimonialCardPosition">CEO, PrettyDopeDesigns</p>
                         </div>
                     </div>    
-                    <p class="testimonialText">"Our senior frontend developer was 70% faster in building
+                    <p class="testimonialCardText">"Our senior frontend developer was 70% faster in building
                         React.js components thanks to VanGoux!"</p>
                 </div>
                 <div class="testimonialCard">
-                    <div class="testimonialImgBloc"> 
+                    <div class="testimonialCardImgBlock"> 
                          <img src="img/testimonial2.jpg" width="100" height="100"
                               srcset="img/testimonial2@2x.jpg 2x,
                                       img/testimonial2@3x.jpg 3x"
                               alt="client's photo2"/>
-                         <div class="testimonialPerson">
-                             <h3 class="testimonialName">Jane Goodman</h3>
-                             <p class="testimonialPosition">Founder, ImpactNation</p>
+                         <div class="testimonialCardPerson">
+                             <h3 class="testimonialCardName">Jane Goodman</h3>
+                             <p class="testimonialCardPosition">Founder, ImpactNation</p>
                          </div>
                     </div>    
-                     <p class="testimonialText">"It was awesome to see VanGoux turn our 
+                     <p class="testimonialCardText">"It was awesome to see VanGoux turn our 
                                                  MVP designs into code within minutes."</p>
                  </div>        
             </section>
-            <h2 id="featureTitle">FEATURES</h2>
-            <section id="featuresSection">                                         
+            </div>
+            <div class="wrapper wrapperFeatures">
+            <h2 class="featuresTitle">FEATURES</h2>
+            <section class="features">                                         
                 <div class="featuresCard">
-                    <div class="featuresImgBloc"> 
+                    <div class="featuresCardImgBlock"> 
                          <img class="featuresCardImg" src="img/features1.png" width="120" height="120"
                               srcset="img/features1@2x.png 2x,
                                  img/features1@3x.png 3x"                    
                               alt=""/>                         
-                         <h3 class="featuresName">Pixel perfect<br>output</h3>
-                         <h3 class="featuresNameMobile onlyMobile">Pixel perfect output</h3>                      
+                         <h3 class="featuresCardName">Pixel perfect<br>output</h3>
+                         <h3 class="featuresCardNameMobile onlyMobile">Pixel perfect output</h3>                      
                     </div>    
-                     <p class="featuresText">Crisp, pixel perfect landing pages without
+                     <p class="featuresCardText">Crisp, pixel perfect landing pages without
                                             bothering your developers</p>
                  </div>        
                  <div class="featuresCard">
-                    <div class="featuresImgBloc"> 
+                    <div class="featuresCardImgBlock"> 
                          <img class="featuresCardImg" src="img/features2.png" width="120" height="120"
                               srcset="img/features2@2x.png 2x,
                                  img/features2@3x.png 3x"                    
                               alt=""/> 
                                                      
-                         <h3 class="featuresName">Flexible &<br>responsive</h3> 
-                         <h3 class="featuresNameMobile onlyMobile">Flexible & responsive</h3>                      
+                         <h3 class="featuresCardName">Flexible &<br>responsive</h3> 
+                         <h3 class="featuresCardNameMobile onlyMobile">Flexible & responsive</h3>                      
                     </div>    
-                     <p class="featuresText">Your web pages will flexibly adapt to
+                     <p class="featuresCardText">Your web pages will flexibly adapt to
                                              different browser window sizes</p>
                  </div>      
                  <div class="featuresCard">
-                    <div class="featuresImgBloc"> 
+                    <div class="featuresCardImgBlock"> 
                          <img class="featuresCardImg" src="img/features3.png" width="120" height="120"
                               srcset="img/features3@2x.png 2x,
                                  img/features3@3x.png 3x"                    
                               alt=""/>                         
-                         <h3 class="featuresName">Complete code<br>freedom</h3> 
-                         <h3 class="featuresNameMobile onlyMobile">Complete code freedom</h3>                     
+                         <h3 class="featuresCardName">Complete code<br>freedom</h3> 
+                         <h3 class="featuresCardNameMobile onlyMobile">Complete code freedom</h3>                     
                     </div>    
-                     <p class="featuresText">VanGoux gives you source code of
+                     <p class="featuresCardText">VanGoux gives you source code of
                                              your website, so you can add your own logic</p>
                  </div>      
             </section>
-            <h2 id="whoForTitle">WHO IS VANGOUX FOR</h2>
-            <h2 id="whoForTitleMobile" class="onlyMobile">USE CASES</h2>
-            <section id="whoForSection">                             
+            </div>
+            <div class="wrapper wrapperWhoFor">
+            <h2 class="whoForTitle">WHO IS VANGOUX FOR</h2>
+            <h2 class="whoForTitleMobile onlyMobile">USE CASES</h2>
+            <section class="whoFor">                             
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">UX ENGINEERS</h3>
-                        <p class="whoForText">Build MVPs for your web as fast as you can disign</p>
+                        <h3 class="whoForCardTitle">UX ENGINEERS</h3>
+                        <p class="whoForCardText">Build MVPs for your web as fast as you can disign</p>
                     </div>
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">UX DESIGNERS</h3>
-                        <p class="whoForText">Create and share realistic prototypes of your website or web</p>
+                        <h3 class="whoForCardTitle">UX DESIGNERS</h3>
+                        <p class="whoForCardText">Create and share realistic prototypes of your website or web</p>
                     </div>
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">REACT DEVELOPERS</h3>
-                        <p class="whoForText">Auto-generate boilerplate components and design systems</p>
+                        <h3 class="whoForCardTitle">REACT DEVELOPERS</h3>
+                        <p class="whoForCardText">Auto-generate boilerplate components and design systems</p>
                     </div>
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">DESIGN AGENCIES</h3>
-                        <p class="whoForText">Close more clients by showing them how quickly you can build apps</p>
+                        <h3 class="whoForCardTitle">DESIGN AGENCIES</h3>
+                        <p class="whoForCardText">Close more clients by showing them how quickly you can build apps</p>
                     </div>
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">STARTUPS</h3>
-                        <p class="whoForText">Go to market quickly by spinning up your website and apps</p>
+                        <h3 class="whoForCardTitle">STARTUPS</h3>
+                        <p class="whoForCardText">Go to market quickly by spinning up your website and apps</p>
                     </div>
                     <div class="whoForCard">
-                        <h3 class="whoForTitle">ENTERPRISES</h3>
-                        <p class="whoForText">Quickly build design systems for your UX and product teams</p>
+                        <h3 class="whoForCardTitle">ENTERPRISES</h3>
+                        <p class="whoForCardText">Quickly build design systems for your UX and product teams</p>
                     </div>                                    
             </section>
-            <h2 id="activityTitle">WHAT CAN YOU DO WITH VANGOUX</h2>
-            <section id="activitySection">          
+            </div>
+            <div class="wrapper wrapperActivity">
+            <h2 class="activityTitle">WHAT CAN YOU DO WITH VANGOUX</h2>
+            <section class="activity">          
                 <div class="activityCard">
                     <img src="img/activity1.png" width="80" height="80"
                          srcset="img/activity1@2x.png 2x,
                             img/activity1@3x.png 3x"                    
                          alt=""/>  
-                    <p class="activityText">Make realistic prototypes</p>
+                    <p class="activityCardText">Make realistic prototypes</p>
                 </div>
                 <div class="activityCard">
                     <img src="img/activity2.png" width="80" height="80"
                          srcset="img/activity2@2x.png 2x,
                                  img/activity2@3x.png 3x"                    
                          alt=""/>  
-                    <p class="activityText">Build an MVP as quickly as you can design</p>
+                    <p class="activityCardText">Build an MVP as quickly as you can design</p>
                 </div>
                 <div class="activityCard">
                     <img src="img/activity3.png" width="80" height="80"
                          srcset="img/activity3@2x.png 2x,
                                  img/activity3@3x.png 3x"                    
                          alt=""/>  
-                    <p class="activityText">Create pixel-perfect landing pages</p>
+                    <p class="activityCardText">Create pixel-perfect landing pages</p>
                 </div>
                 <div class="activityCard">
                     <img src="img/activity4.png" width="80" height="80"
                          srcset="img/activity4@2x.png 2x,
                                  img/activity4@3x.png 3x"                    
                          alt=""/>  
-                    <p class="activityText">Generate a design system for your product</p>
+                    <p class="activityCardText">Generate a design system for your product</p>
                 </div>
             </section>
-            <section id="callingSection">
-                    <h2 id="callingTitle">DON'T KNOW HOW TO WORK WITH CODE?</h2>                    
-                    <p id="callingText">Schedule a call and we'll show you how you could become a design-<br>
+            </div>
+            <div class="wrapper wrapperCalling">
+            <section class="calling">
+                    <h2 class="callingTitle">DON'T KNOW HOW TO WORK WITH CODE?</h2>                    
+                    <p class="callingText">Schedule a call and we'll show you how you could become a design-<br>
                        to-code rockstar using VanGoux</p>
-                    <p id="callingTextMobile" class="onlyMobile">Schedule a call and we'll show you how you
-                         could<br> become a design-to-code rockstar using VanGoux</p>
+                    <p class="callingTextMobile onlyMobile">Schedule a call and we'll show you how you
+                         could become a design-to-code rockstar using VanGoux</p>
  
-                    <button type="button" id="callingButton">Schedule a call with us</button>                
+                    <button type="button" class="button callingButton">Schedule a call with us</button>                
             </section>
-            
-            <section id="contactUsSection">             
-                <div id="formBlock"> 
-                    <h2 id="contactUsTitle">CONTACT US</h2>                   
-                    <form id="contactForm" name="contact" method="post" action="handler.php">
-                       
-                        <p class="formLabel">Name</p>
-                        <input class="formInput" type="text" name="name"/><br>                        
-                        <p class="formLabel">Email</p>
-                        <input class="formInput" type="email" name="email"/><br>                        
-                        <p class="formLabel">Message</p>
-                        <textarea class="message" name="message"></textarea><br>                        
-                        <button type="submit" id="contactUsButton">CONTACT US</button>            
-                    </form>
+            </div>
+            <div class="wrapper wrapperContactUs">
+                
+            <section class="contactUs"> 
+                <div class="wrapperContactUsFormBlock onlyMobile">            
+                    <div class="contactUsFormBlock"> 
+                        <h2 class="contactUsTitle">CONTACT US</h2>                   
+                        <form class="contactUsForm" name="contact" method="post" action="handler.php">                       
+                            <input class="contactUsFormInput" type="text" id="name" name="name" placeholder="Name"/><br> 
+                            <input class="contactUsFormInput" type="email" id="email" name="email" placeholder="Email"/><br>                        
+                            <textarea class="contactUsFormTextarea" id="message" name="message" placeholder="Message"></textarea><br>                        
+                            <button type="submit" class="button contactUsButton">CONTACT US</button>            
+                        </form>
+                    </div>
                 </div>
-                <div id="mapBlock">
-                    <img src="img/map600x600.png" width=100% height=100%/>
-                </div>
+                <div class="wrapperContactUsMapBlock onlyMobile">
+                    <div class="contactUsMapBlock">
+                        <img src="img/map600x600.png" width=100% height=100%/>
+                    </div>
+                </div>    
             </section>
+            </div>
         </main>
-        <footer id="footer">      
+        <div class="wrapper wrapperFooter">
+        <footer class="footer">      
             <div class="footerLogo">
                 <a href="#"><img src="img/footerLogo.png"
                                  srcset="img/footerLogo@2x.png 2x,
@@ -216,31 +236,34 @@
                                  alt=""/>       
                 </a>
             </div>
-            <ul class="footerMenu">
-                <li class="footerLink"><a href="#contactUsSection">Contact</a></li>
-                <li class="footerLink"><a href="#">Feedback</a></li>
-                <li class="footerLink"><a href="#">Join our Slack</a></li>
-                <li class="footerLink"><a href="#">Terms</a></li>
-            </ul> 
-            
-                <a class="socialLink" href="#" target="_blank">
+            <nav class="footerMenu">
+                <a class="footerMenuLink" href="#contactUsSection">Contact</a>
+                <a class="footerMenuLink" href="#">Feedback</a>
+                <a class="footerMenuLink" href="#">Join our Slack</a>
+                <a class="footerMenuLink" href="#">Terms</a>
+            </nav> 
+            <div class="footerSocialBlock">     
+                <a class="footerSocialBlockLink" href="#" target="_blank">
                 <img src="img/facebook.png"
                      srcset="img/facebook@2x.png 2x,
                              img/facebook@3x.png 3x"/>                             
                 </a>
                
-                <a class="socialLink" href="#" target="_blank">
+                <a class="footerSocialBlockLink" href="#" target="_blank">
                 <img src="img/insta.png"
                      srcset="img/insta@2x.png 2x,
                              img/insta@3x.png 3x"/>
                 </a>  
-            
+            </div>
             <img class="footerImage" src="img/footerImg.png"
                  srcset="img/footerImg@2x.png 2x,
                          img/footerImg@3x.png 3x"
                  alt=""/>                       
         </footer>
-        <footer id="footerMobile" class="onlyMobile">      
+        </div>
+        <div class="wrapper wrapperFooterMobile">
+        <footer class="footerMobile onlyMobile"> 
+            <div class="footerMobileTop">     
             <div class="footerLogo">
                 <a href="#"><img src="img/footerLogo.png"
                                  srcset="img/footerLogo@2x.png 2x,
@@ -248,30 +271,34 @@
                                  alt=""/>       
                 </a>
             </div>
-            <div class="socialBlock">          
-                <a class="socialLink" href="#" target="_blank">
+            <div class="footerSocialBlock">          
+                <a class="footerSocialBlockLink" href="#" target="_blank">
                 <img src="img/facebook.png"
                      srcset="img/facebook@2x.png 2x,
                              img/facebook@3x.png 3x"/>                             
                 </a>
                
-                <a class="socialLink" href="#" target="_blank">
+                <a class="footerSocialBlockLink" href="#" target="_blank">
                 <img src="img/insta.png"
                      srcset="img/insta@2x.png 2x,
                              img/insta@3x.png 3x"/>
                 </a>  
-            </div> 
-            <ul class="footerMenu">
-                <li class="footerLink"><a href="#contactUsSection">Contact</a></li>
-                <li class="footerLink"><a href="#">Feedback</a></li>
-                <li class="footerLink"><a href="#">Join our Slack</a></li>
-                <li class="footerLink"><a href="#">Terms</a></li>
-            </ul> 
+            </div>
+            </div>
+            <div class="footerMobileBottom">
+            <nav class="footerMenu">
+                <a class="footerMenuLink" href="#contactUsSection">Contact</a>
+                <a class="footerMenuLink" href="#">Feedback</a>
+                <a class="footerMenuLink" href="#">Join our Slack</a>
+                <a class="footerMenuLink" href="#">Terms</a>
+            </nav> 
                                              
             <img class="footerImage" src="img/footerImg.png"
                  srcset="img/footerImg@2x.png 2x,
                          img/footerImg@3x.png 3x"
-                 alt=""/>                       
+                 alt=""/> 
+            </div>                          
         </footer>
+        </div>
     </body>
 </html>

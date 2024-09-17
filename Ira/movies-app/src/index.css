@@ -1,0 +1,477 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background: #e3e3e3;
+}
+
+.wrapper {
+  min-width: 300px;
+  max-width: 1300px;
+  padding: 40px 80px;  
+}
+
+.header, .moviePageHeader {
+  min-height: 120px;  
+  padding: 20px 100px;
+  background: url("images/headerBg.jpg") 50% 50% / cover no-repeat;   
+  position: relative;
+}
+
+.headerMarginBottom {
+  min-height: 120px;  
+  padding: 20px 100px;
+  background: url("images/headerBg.jpg") 50% 50% / cover no-repeat;   
+  position: relative;
+  margin-bottom: 80px; 
+}
+
+.headerMarginBottomNull {
+  margin-bottom: 0;
+}
+
+.header::after, .headerMarginBottom::after, 
+.moviePageHeader::after {
+  content: "";
+  background:  #000;
+	position: absolute;
+	left: 0;	
+  top: 0;
+	width: 100%;
+	height: 100%; 
+  opacity: 0.6;	
+	z-index: 10;
+}
+
+.moviePageHeader::after {
+  opacity: 0.8;
+}
+
+.logoLink {
+  display: table;  
+  height: 30px;
+  margin-bottom: 60px;
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: bold;
+  text-align: center;  
+  color: #dd2b55;
+  z-index: 100; 
+  position: relative;
+}
+
+.searchForm {
+  position: relative;
+  z-index: 100;
+}
+
+.searchFormCaption {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;  
+  text-transform: uppercase;  
+  color: #fff;  
+}
+
+.searchFormInput, .searchFormInput:focus {
+  width: 100%;
+  height: 40px;
+  padding: 0 40px;
+  border: none;
+  outline: none;
+  line-height: 2;
+  background-color: #000;
+  font-size: 16px;  
+  color: #fff;
+  opacity: 0.9;
+  border-bottom: 4px solid #dd2b55;
+}
+
+.searchFormControls {
+  height: 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterBlock {
+  height: 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterBlockCaption, .searchButton {
+  margin-right: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: bold;  
+  text-align: center;
+  text-transform: uppercase;  
+  border-radius: 2px;
+  background: #dd2b55;
+  color: #fff;  
+  height: 30px;    
+  border: none;
+  outline: none; 
+}
+
+.filterBlockButtonActive {
+  margin-right: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: bold;  
+  text-align: center;
+  text-transform: uppercase;  
+  border-radius: 2px;
+  background: #dd2b55;
+  color: #fff;  
+  height: 30px;    
+  border: none;
+  outline: none;
+  cursor: pointer;
+} 
+
+.filterBlockButtonNotActive {
+  margin-right: 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: bold;  
+  text-align: center;
+  text-transform: uppercase;  
+  border-radius: 2px;
+  background: #515a5a;
+  color: #fff;  
+  height: 30px;    
+  border: none;
+  outline: none; 
+  cursor: pointer;
+} 
+
+.filterBlockCaption {
+  background: none;
+}
+.filterBlockButton {
+  cursor: pointer;
+}
+
+.searchButton {
+  height: 40px;
+  margin-right: 0;
+  padding: 0 50px;
+  font-size: 16px;  
+  cursor: pointer;
+}
+
+.filterBlockButton:last-child { 
+  margin-right: 0;
+}
+
+.headerBottomBlock {
+  height: 50px;
+  margin-bottom: 80px;
+  padding: 0 100px;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moviesQuantityBlock, .moviesGenreBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moviesQuantity, .moviesGenre {  
+  height: 30px;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  background: transparent;
+  color: #515a5a;
+  border: none;
+  outline: none; 
+}
+
+.sortBlockButtonActive {
+  height: 30px;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 2;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  background: transparent;
+  color: #dd2b55;
+  border: none;
+  outline: none; 
+  cursor: pointer;
+}
+
+.sortBlockButtonNotActive {  
+    height: 30px;
+    padding: 0 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    background: transparent;
+    color: #515a5a;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+}
+
+.sortBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.sortBlockButton:last-child {
+  color: #dd2b55;
+}
+
+.notFoundBlock {  
+  min-height: 400px;
+  padding: 60px;
+  background: #e3e3e3;
+  display: flex;  
+}
+
+.notFoundBlock p {
+  margin: auto;
+  font-size: 40px;
+  color: #000;
+}
+  
+main {
+  min-height: 300px;
+  margin-bottom: 40px;  
+}
+
+.moviesBlock {
+  min-height: 300px;
+  padding: 0 40px; 
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movieCardWrapper {
+  width: 300px;
+  margin-bottom: 60px; 
+  height: auto;   
+}
+
+.movieCardImageLink {
+  display: block; 
+  width: 100%;
+  height: 100%;
+}
+
+.movieCardImage {
+  width: 100%;
+  height: auto;
+}
+
+.movieCardInfo {  
+  padding: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #515a5a;
+}
+
+.movieCardTitleBlock {
+  width: calc(100% - 70px);
+  margin-right: 20px;
+}
+
+.movieCardTitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.movieCardGenre {
+  font-size: 12px;
+}
+
+.movieCardYear {
+  width: 50px;
+  height: 26px;
+  border: 1px solid #515a5a;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.footer {
+  height: 70px; 
+  padding: 20px 100px;
+  background:#515a5a;  
+}
+
+.moviePageHeader {
+  min-height: 200px;  
+  padding: 20px 60px;  
+}
+
+.moviePageHeaderTop {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+.moviePageHeaderTop .logoLink {
+  margin: 0;
+}
+
+.moviePageHeaderButton {
+  height: 30px;
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: bold;  
+  text-align: center;
+  text-transform: uppercase;  
+  border-radius: 2px;
+  background: #fff;
+  color: #dd2b55;  
+  height: 30px;    
+  border: none;
+  outline: none;  
+  cursor: pointer;
+}
+.moviePageHeaderButtonLink {
+  display: table;
+  height: 30px;
+  cursor: pointer;
+}
+
+.movieDetailsBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+
+.movieDetailsBlock .movieCardWrapper {
+  margin-bottom: 0;
+}
+
+.movieInfoGenre {
+  margin-bottom: 10px;
+}
+
+.movieInfoTitleAndRating {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+}
+
+.movieInfoTitle {
+  font-size: 30px;
+  color: #dd2b55;
+  margin-right: 30px;  
+} 
+
+.movieInfoRating {
+  display: block;
+  width: 50px;
+  text-align: center;
+  border: 1px solid #f5ecce;
+  color: #f5ecce;
+  font-size: 16px;
+  line-height: 3;
+  border-radius: 50%;
+}
+
+.movieInfoDateAndTime {  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+  font-weight: bold;
+  margin-bottom: 20px;  
+}
+
+.movieInfoGenre, .movieInfoDateAndTime, .movieInfoOverview {
+  line-height: 2;
+  font-size: 16px;  
+  color: rgba(255, 255, 255, 0.7);  
+}
+
+.movieInfoDate {
+  margin-right: 30px;
+} 
+
+.movieInfo {
+  width: 100% - 110px;
+  padding: 60px 10px 20px 40px;
+}
+
+.wrapper404 {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.block404 {
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.number404 {  
+  margin-bottom: 30px;
+  font-size: 60px;
+  color: #2E2E2E;
+}
+
+.text404 {  
+  font-size: 40px;
+  color: #2E2E2E;
+}
+
+.descriptionNotFound {
+  font-size: 30px;
+  color: #dd2b55;
+}
+

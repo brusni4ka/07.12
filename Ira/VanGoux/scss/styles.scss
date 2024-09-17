@@ -24,13 +24,11 @@ $dark_blue_grey: #11223f;
 * {  
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    padding-top: 15px;     
-    background:  url('../img/bg_img.png') 82% 340px no-repeat,
-                 url('../img/background.png') 0 0;           
-                            
+body {      
+    background: url('../img/background.png') 0 0;                                        
 }
 
 a {
@@ -40,178 +38,144 @@ a {
     }
 }
 
-nav {
-    height: 110px;
-    margin-bottom: 160px;
-    padding: 0 115px;
+.wrapper { 
+    max-width: 1440px; 
+    min-width: 300px; 
+    padding: 0 10%;
+        &Calling {
+            background: url("../img/imgBlue.png") 100% center no-repeat #1968fc;
+        } 
+        &ContactUs {
+            padding-right: 0;
+        }
+        &Hero {
+            background: url("../img/bg_img.png") 100% -10% no-repeat; 
+        }             
+} 
+
+.header {
+    min-height: 110px; 
+    margin: 0 auto;  
+    padding: 30px 0 120px 0;  
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;   
 }
 
-#logo {
+.logo {
     width: 180px;
-    height: 50px;       
-}
-
-#logo {
-     a {
-    display: block;
-    width: 180px;
-    height: 50px;
-   }
+    height: 50px;  
+    a {
+        display: block;
+        width: 180px;
+        height: 50px;
+    }     
 }
 
 .button {
     height: 50px;
+    padding: 0 40px;
     font-size: 14px;
     font-weight: bold;
-    line-height: 50px;
+    line-height: 20px;
     text-transform: uppercase;
     text-align: center;
     border: none;
-}
+    outline: none;
+    box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
+    text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
+    font-family: 'mulisemibold', Helvetica, sans-serif;                  
+    background-color: $blue;
+    color: $white;
+} 
 
-#menu {
-    width: 540px;
-    height: 50px;
-    margin-left: 160px;
+.menu {
+    min-height: 50px;
+    margin-left: auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    list-style: none; 
-        &Button {   
-            @extend .button;                                                                
-            width: 180px;    
-            min-width: 180px;            
-            margin-left: 20px;
-            box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
-            text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
-            font-family: 'mulisemibold', Helvetica, sans-serif;                  
-            background-color: $blue;
-            color: $white;
-        }     
-}
-
-.menuLink {
-    width: 120px;
-    height: 50px;
-    text-align: center;
-        &:last-child  {
-            width: 180px;
-        }
-        a {
+    justify-content: space-between;  
+       &Link {
            display: block;
-           width: 120px;
-           height: 50px;
+           padding: 0 20px;           
            font-family: 'mulisemibold', Helvetica, sans-serif;
            font-size: 14px;    
            font-weight: 600;
-           line-height: 50px;
-           color: $black;
-                &:last-child  {
-                    width: 180px;
-                }
+           line-height: 20px;
+           color: $black;                   
         }
-        
 }
 
-#header {
-    height: 310px; 
-    margin-bottom: 80px;
-    padding: 0 115px; 
-       &Text {
-           margin-bottom: 40px;
-           font-size: 20px; 
+.hero {
+    margin: 0 auto;
+    padding-bottom: 80px;    
+        &Title, &TitleMobile {
+            margin-bottom: 30px;
+            font-family: "mulisemibold", Helvetica, sans-serif;
+            font-size: 2.5em;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            color: 	$dark_blue_grey;
+        }       
+       &Text, &TextMobile {
+           margin-bottom: 30px;
+           font-size: 1.25em; 
            line-height: 2;  
            color: $dark_blue_grey;
            font-family:  'muliregular', Helvetica, sans-serif;
        }  
-       &Button {
-           @extend .button; 
-           width: 300px;
-           min-width: 300px;           
-           margin-bottom: 40px;
-           text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
-           box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
-           font-family: 'mulisemibold', Arial, sans-serif;           
-           color: $white;
-           background-color: $blue;
-               &Mobile {
-                   display: none;
-               }
-       }     
 }
 
-h1 {       
-    margin-bottom: 20px;
-    font-family: 'mulisemibold', Helvetica, sans-serif;
-    font-size: 40px;          
-    line-height: 1.5;
-    letter-spacing: 1px;
-    color: 	$dark_blue_grey;
-}
-
-#blueSectionMobile {
+.onlyMobile {
     display: none;
 }
 
-#testimonialSection {
-    height: 370px;
-    margin-bottom: 40px;
-    padding: 45px 115px;
+.testimonial {
+    margin: 0 auto;
+    padding-bottom: 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;    
-}
-
-.testimonialCard {
-    width: 424px;
-    min-width: 424px;
-    height: 200px;    
-    padding: 40px;    
-    box-shadow: 0 20px 60px 0 rgba(25, 104, 252, 0.1);
-    background: $white url("../img/quote.png") 90% 16% no-repeat;  
-        &first-child {
-            margin-right: 50px;
+        &Card {
+            padding: 40px;
+            box-shadow: 0 20px 60px 0 rgba(25, 104, 252, 0.1);
+            background: #ffffff url("../img/quote.png") 90% 16% no-repeat;
+            flex: 1;
+                &:first-child {
+                    margin-right: 50px;
+            }
+                &ImgBlock {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-bottom: 40px;
+                }
+                &Person {
+                    margin-left: 20px;
+                    line-height: 2;            
+                }
+                &Name {
+                    font-family: "mulisemibold", Arial, sans-serif;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $dark_blue_grey;
+                }
+                &Position {
+                    opacity: 0.8;
+                    font-family: "mulisemibold", Arial, sans-serif;
+                    font-size: 14px;
+                    color: #1967fa;
+                }
+                &Text {
+                    line-height: 1.88;
+                    font-family: "muliregular", Helvetica, sans-serif;
+                    font-size: 16px;
+                    color: $dark_blue_grey;       
+                }       
         }
-
+    
 }
-
-.testimonialImgBloc{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 40px;
-}
-
-.testimonialPerson {  
-    margin-left: 20px;       
-    line-height: 2;
-}
-
-.testimonialName {    
-    font-family: 'mulisemibold', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: $dark_blue_grey;   
-}
-
-.testimonialPosition {   
-    opacity: 0.8;
-    font-family: 'mulisemibold', Arial, sans-serif;  
-    font-size: 14px; 
-    color: #1967fa;
-}
-
-.testimonialText {
-    line-height: 1.88;
-    font-family:'muliregular', Helvetica, sans-serif;
-    font-size: 16px;
-    color: $dark_blue_grey;
-}
-
+ 
 .line {
     display: table;
     content: "";
@@ -222,7 +186,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 40px 115px;
+    margin-bottom: 40px;
     font-family: 'muliregular', Helvetica, sans-serif;  
     font-size: 30px; 
     line-height: 2;
@@ -238,242 +202,209 @@ h2 {
         }
 }
 
-#featuresSection {
-    height: 400px;    
-    margin-bottom: 40px;
-    padding: 0 115px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;    
-}
-
-.featuresCard {
-    width: 320px;
-    height: 290px;
-    margin-right: 60px;
-    background-color: $white;
-    box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);   
-        &:first-child {
-            align-self: flex-start;
-        } 
-        &:last-child {
-            margin: 0;
-            align-self: flex-end;
+.features { 
+    margin: 0 auto;
+    padding-bottom: 80px;  
+    display: flex;  
+    justify-content: space-between;      
+        &Card {
+            margin-right: 40px;
+            background-color: $white;
+            box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);  
+            position: relative;
+            flex: 1;
+               &:nth-child(2) {
+                    top: 40px;
+               } 
+               &:nth-child(3) {
+                    top: 80px;
+               }    
+               &:last-child {
+                    margin: 0;
+               } 
+               &ImgBlock {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start; 
+                    background-color: #f3f7ff;
+               }
+               &Name, &NameMobile {
+                    padding: 20px;    
+                    font-family: 'mulisemibold', Helvetica, sans-serif; 
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    color: $dark_blue_grey; 
+                }
+                &Text {
+                    padding: 30px 40px; 
+                    font-family: 'muliregular', Helvetica, sans-serif; 
+                    font-size: 16px;
+                    line-height: 1.88;
+                    color: $dark_blue_grey;
+                }    
+             
         }
 }
 
-.featuresImgBloc {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    background-color: #f3f7ff;   
+.whoFor {
+    margin: 0 auto;
+    padding-bottom: 60px; 
+    display: flex; 
+    align-items: stretch;   
+    justify-content: space-between;
+    flex-wrap: wrap;       
+       &Card {    
+            width: calc(33% - 20px);    
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1); 
+            background-color: $white;     
+               &Title {
+                    margin-bottom: 20px;
+                    font-family: 'mulisemibold', Helvetica, sans-serif; 
+                    font-size: 20px;      
+                    font-weight: bold;
+                    line-height: 2;    
+                    color: #1967fa;
+                }
+                &Text {                      
+                    font-size: 16px;
+                    font-family: "muliregular", Helvetica, sans-serif;
+                    line-height: 1.88;  
+                    color: $dark_blue_grey;
+                }
+        }
 }
 
-.featuresName {
-    padding: 20px;    
-    font-family: 'mulisemibold', Arial, sans-serif; 
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.5;
-    color: $dark_blue_grey; 
-}
-
-.featuresText {
-    padding: 40px; 
-    font-family: 'muliregular', Helvetica, sans-serif; 
-    font-size: 16px;
-    line-height: 1.88;
-    color: $dark_blue_grey;
-}    
-
-#whoForSection {
-    height: 450px; 
-    max-width: 1300px;   
-    margin-bottom: 40px; 
-    padding: 0 100px;   
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;        
-}
-
-.whoForCard {    
-    width: 310px;
-    height: 110px;
-    margin: 0 20px 20px 0;
-    padding: 20px;
-    background-color: $white;
-    box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);    
-       &:nth-child(3), &:nth-child(6) {
-            margin: 0 0 20px 0;
-       }   
-}
-
-.whoForTitle {  
-    margin-bottom: 20px;
-    font-family: 'mulisemibold', Helvetica, sans-serif; 
-    font-size: 20px;      
-    line-height: 2;    
-    color: #1967fa;
-}
-
-.whoForText {
-    font-size: 16px;
-    font-family: 'muliregular', Helvetica, sans-serif; 
-    line-height: 1.88;
-    color: $dark_blue_grey;   
-}
-
-#activitySection {
-    height: 240px; 
-    max-width: 1300px;   
-    margin-bottom: 40px;
-    padding: 0 115px;
+.activity {
+    margin: 0 auto;
+    padding-bottom: 60px;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    flex-wrap: wrap;        
-}
-
-.activityCard {
-    width: 480px;
-    height: 80px;
-    margin: 0 40px 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; 
-    background-color: $white;
-    box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1);  
-        &:nth-child(2), &:nth-child(4) {
-            margin: 0 0 40px 0;
-    }      
-}
-
-.activityText {
-    padding: 15px; 
-    font-family: 'mulisemibold', Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: 600;    
-    line-height: 1.5;  
-    color: $black;    
-}
-
-#callingSection {
-    height: 300px;    
-    padding: 80px 160px 80px 115px;    
-    background: url("../img/imgBlue.png") 110% center no-repeat $blue;
-
-}
-
-#callingTitle {       
-    margin: 0 0 60px 0;    
-    font-family: 'muliregular', Helvetica, sans-serif; 
-    font-size: 30px;     
-    line-height: 2;
-    color: $white;
-        &::after {
-            @extend .line;           
-	        width: 80px;  	          	
-            margin-top: 8px;
-            margin-left: -40px;
-            background: $white;
-            box-shadow: 0 2px 0 0 #6a9eff;
-        }
-}
-
-#callingText {
-    margin-bottom: 40px;
-    font-family:  'muliregular', Helvetica, sans-serif; 
-    font-size: 20px;  
-    line-height: 2; 
-    color: $white;
-}
-
-#callingButton {
-    @extend .button; 
-    width: 320px;
-    min-width: 320px;    
-    font-family:  'mulisemibold', Helvetica, sans-serif;   
-    color: $blue;
-    background-color: #ffffff;
-    box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
-}
-
-#contactUsSection {    
-    height: 650px; 
-    padding: 0 0 0 115px;
-    display: flex;
-    align-items: flex-start;    
-    justify-content: space-around;       
-    background-color: #f5f8ff;
-}
-
-#formBloc {    
-    width: 45%;
-    height: 500px;
-    padding: 120px 0 20px 0;    
-}
-
-#contactUsHeader {
-    margin: 0 0 40px 0; 
-    font-family: Helvetica, sans-serif; 
-        &::after {
-            @extend .line;           
-	        width: 50px;         	
-            margin-top: 8px;
-            margin-left: -25px;
-            background: $blue;
-            box-shadow: 0 2px 0 0 #d1e1fe;
+    flex-wrap: wrap;
+        &Card {
+            width: calc(50% - 20px);
+            min-height: 80px;
+            margin: 0 40px 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #ffffff;
+            box-shadow: 0 20px 60px 0 rgba(49, 69, 244, 0.1); 
+                &:nth-child(2), &:nth-child(4) {
+                    margin: 0 0 40px 0; 
+                }
+                &Text {  
+                    padding: 15px;
+                    font-family: "mulisemibold", Helvetica, sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    color: $black;                     
+                } 
         }  
 }
 
-#contactForm {
-    padding-left: 40px;    
+.calling {
+    margin: 0 auto;
+    padding-bottom: 80px;   
+        &Title {       
+            margin: 0 0 40px 0;    
+            font-family: 'muliregular', Helvetica, sans-serif; 
+            font-size: 30px;     
+            line-height: 2;
+            color: $white;
+                &::after {
+                    @extend .line;           
+	                width: 80px;  	          	
+                    margin-top: 8px;
+                    margin-left: -40px;
+                    background: $white;
+                    box-shadow: 0 2px 0 0 #6a9eff;
+                }
+        }
+        &Text {
+             margin-bottom: 40px;
+             font-family: "muliregular", Helvetica, sans-serif;
+             font-size: 20px;
+             line-height: 2;
+             color: $white;
+        }
+        &Button {
+            @extend .button;
+            color: $blue;
+            background-color: $white;
+            box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
+        }
 }
 
-.formLabel {    
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;    
-    line-height: 1.63;
-    letter-spacing: 0.53px;
-    color: #141720;       
-}
 
-.formInput, .message {
-    width: 400px;
-    height: 52px;    
-    border: none;
-    background-color: #f6f9fc;
-    border-bottom: 2px solid $blue;
-}
+.contactUs {       
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;    
+    justify-content: space-around;       
+    background-color: #f5f8ff;
+        &Title {
+            margin: 0 0 40px 0; 
+            font-family: Helvetica, sans-serif; 
+                &::after {
+                   @extend .line;           
+	               width: 50px;         	
+                   margin-top: 8px;
+                   margin-left: -25px;
+                   background: $blue;
+                   box-shadow: 0 2px 0 0 #d1e1fe;
+                }
+        }
+        &FormBlock {  
+            width: 55%;  
+            padding: 120px 60px 20px 0;
+        }
+        &Form {
+            padding-left: 60px;
+                &Input, &Textarea {
+                    width: 100%;
+                    height: 52px;
+                    margin-bottom: 40px;
+                    border: none;
+                    outline: none;
+                    line-height: 2;
+                    background-color: #f6f9fc;
+                    border-bottom: 2px solid #1968fc;
+                        &::placeholder {
+                            font-family: Helvetica, sans-serif;
+                            font-size: 16px;
+                            line-height: 1.63;
+                            letter-spacing: 0.53px;
+                            color: #141720;
+                        }
+                }
+                &Textarea {
+                    height: 120px;
+                }
+                 
+        }
+        &Button {
+            @extend .button;
+            width: 60%;  
+            margin-left: 40%;
+            font-family: Helvetica, sans-serif;  
+            box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
+        }
+        &MapBlock {
+            width: 45%;
+            height: auto;
+        }
+}    
 
-.message {
-    margin-bottom: 40px;
-    height: 120px;    
-}
-
-#contactUsButton {
-    @extend .button;
-    width: 300px;
-    min-width: 300px;    
-    margin-left: 98px;
-    font-family: Helvetica, sans-serif;    
-    color: $white;
-    background-color: $blue;
-    box-shadow: 4px 4px 20px 0 rgba(255, 255, 255, 0.4);
-}
-
-#mapBloc {    
-    margin-left: 40px;
-    width: calc(45%-155px);    
-    height: 640px;    
-}
-
-#footer {
-    height: 130px;    
-    padding: 0 115px;
+.footer {
+    height: 130px; 
+    margin: 0 auto;   
+    padding: 40px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -482,148 +413,273 @@ h2 {
             width: 200px;
             height: 50px;
             margin-right: 40px;
-            a {
-                display: block;
-                width: 200px;
-                height: 50px; 
-            } 
+                a {
+                   display: block;
+                   width: 200px;
+                   height: 50px; 
+                } 
         }    
-        &Menu {   
-            width: 480px;
-            height: 50px;  
-            margin-right: 40px;  
+        &Menu {               
+            min-height: 50px;               
             display: flex;
             align-items: center;
             justify-content: space-between;
-            list-style: none; 
-        }  
-}
+                &Link {
+                    display: block;
+                    min-height: 50px;  
+                    padding: 20px;
+                    font-family: "mulisemibold", Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    text-align: center;
+                    color: $black;
+                }            
+        } 
+        &SocialBlock {  
+            width: 100px;
+            height: 50px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+                &Link {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 60px;                    
+                }
 
-.footerLink {
-    width: 120px;
-    height: 50px;
-    text-align: center;  
-        a {
-            display: block;
-            width: 120px;
-            height: 50px;
-            font-family: 'mulisemibold', Helvetica, sans-serif;
-            font-size: 14px;    
-            font-weight: 600;
-            line-height: 50px;
-            color: $black;
-        }
+        } 
+        
 }
-
-#socialLink {
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-align: center;    
-}
-
 
 /*RESPONSIVE DESIGN  */
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
 
     body {
-        padding: 5px;
-        background: url('../img/bg_img.png') 3% 640px no-repeat,
-                       url('../img/backgroundMobile.png') 0 0;
-     }
+        background: url("../img/backgroundMobile.png") 0 0;
+    }
      
-     nav {
-        padding: 75px;
-        margin-bottom: 80px;
-        display: bloc;
-     }
-     
-     menu {
-        display: none;
-     }
-     
-     #menuButton {
-        display: none;
-     }
-     
-     header {
-        margin-bottom: 700px;
-     }
-     
-     #headerButton {
-        display: none;
-     }
-     
-     #headerButtonMobile {
-         width: 300px;
-         min-width: 300px;
-         height: 50px;
-         margin-bottom: 40px;
-         text-shadow: 0 10px 40px rgba(25, 104, 252, 0.2);
-         box-shadow: 0 10px 40px 0 rgba(25, 104, 252, 0.3);
-         font-family: 'mulisemibold', Arial, sans-serif;
-         font-size: 14px;    
-         text-transform: uppercase;
-         line-height: 50px;
-         text-align: center;
-         color: #ffffff;
-         background-color: #1968fc;
-     }
-     
-     #bluBlocMobile {
-         height: 180px;
-         font-family: 'mulisemibold', Arial, sans-serif;
-         font-size: 20px;   
-         line-height: 2;  
-         text-align: center;
-         text-transform: uppercase;
-         color: #ffffff;
-         background-color: #1968fc;
-     }
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+    .menu, .headerButton, .heroTitle, .heroButton,
+    .heroText, .featuresCardName, .whoForTitle, .callingText,
+    .wrapperFooter, .footer {
+         display: none;
+    }
+    
+    .wrapperImage, .wrapperBlue, .wrapperContactUsFormBlock,
+    .wrapperContactUsMapBlock, .wrapperFooterMobile {
+        display: block;
+    }
 
+    .header {
+        padding: 30px 0 60px 0;
+    }
+    
+    .wrapperHero {
+        background: none;
+    }
 
+    .hero {              
+        padding-bottom: 60px;
+        background-image: none;   
+            &TitleMobile {
+                margin-bottom: 20px;
+                display: block;
+                font-size: 2.5em; 
+            } 
+            &TextMobile {
+                display: block;      
+                font-size: 1.25em;
+            }
+            &ButtonMobile {
+                display: block;
+            }
+    }    
+     
+    .wrapperImage {
+        padding: 0 20px;  
+    }
 
+    .imageSectionMobile {
+        display: block;
+        min-height: 418px;
+        margin: 0 auto;
+        padding-bottom: 60px;   
+        background: url("../img/bg_img.png") center 0 no-repeat;      
+    }
+    
+    .wrapperBlue, .wrapperCalling {
+        background: #1968fc;
+    }
 
+    .blueSectionMobile {
+        display: block;         
+        min-height: 180px;
+        margin-bottom: 60px;         
+        font-family: 'mulisemibold', Helvetica, sans-serif;
+        font-size: 20px;   
+        line-height: 1.5;  
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;          
+   }
+    
+   .blueSectionTitle {
+         margin: 0 auto;
+         padding: 60px 0;
+   }
 
+   .testimonial {           
+        flex-direction: column;
+        margin-bottom: 0;
+        padding-bottom:  60px;
+            &Card {
+                margin-bottom: 50px;
+                padding: 40px 30px;                
+                    &:first-child {
+                        margin-right: 0;
+                    }
+            }
+    }
+    
+    h2::after {
+        margin-left: 0;
+    }
 
+   .features {    
+        flex-direction: column;
+            &Card {
+                margin-right: 0;
+                margin-bottom: 55px;
+                    &:nth-child(2), &:nth-child(3) {
+                        top: 0;
+                    }
+                    &Img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    &:first-child::after, 
+                    &:nth-child(2)::after {
+                        display: table;
+                        content: "";
+                        width: 1px;
+                        height: 60px;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        margin-left: 60px;
+                        border-left: dotted 2px #1968fc;                   
+                    }
+            }
+            &NameMobile {
+                display: block;
+                padding: 20px;
+                font-family: "mulisemibold", Arial, sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 1.5;
+                color: $dark_blue_grey;
+            }
+    }
 
+    .whoFor {      
+        padding-bottom: 60px;  
+            &TitleMobile {
+                display: block;                
+            }  
+            &Card {
+                width: calc(50% - 10px);  
+                    &Title {
+                        line-height: 1.5;
+                    }
+                    &Text {
+                        line-height: 1.2;
+                    }
+            }  
 
+      }
+      
+    .activitySection {       
+        padding-bottom: 60px;
+        flex-direction: column;      
+    }
+  
+    .activityCard {
+        width: 100%; 
+        margin: 0 0 40px 0;     
+    }
+        
+    .calling {      
+        padding-bottom: 60px;       
+        background: #1968fc;
+            &TextMobile {
+                display: block;
+                margin-bottom: 40px;
+                font-family: "muliregular", Helvetica, sans-serif;
+                font-size: 20px;
+                line-height: 2;
+                color: $white;
+            }
+            &Title::after {
+                margin-left: 0;
+            }
+    }
+   
+    .wrapperContactUs {
+        padding: 0;
+            &FormBlock {
+                padding-left: 10%;
+            }
+    }   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .contactUs {        
+        flex-direction: column;
+        padding: 0;
+            &Title::after {
+                width: 80px;      
+                margin-left: 0px;  
+            }
+            &FormBlock {
+                width: 100%;   
+                padding-bottom: 60px; 
+                padding-left: calc();
+            }
+            &Form {
+                padding-left: 60px;
+            }
+            &MapBlock {
+                width: 100%;                
+            }
+      }  
+          
+    .footerMobile {
+        display: block;
+        padding: 30px 0;                 
+    }
+      
+    .footerMobileTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+  
+    .footerMobileBottom {
+        display: flex;      
+        align-items: center;
+        justify-content: center;      
+    }
+      
+    .footerMenuLink {
+        padding: 0 20px;
+    }  
+      
+    .footerImage {
+        position: relative;
+        top: 40px;
+        left: 30px;
+    }  
+    
 }
 
